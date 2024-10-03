@@ -49,14 +49,36 @@ header {
     padding: 1rem 2.7rem;
     margin-left: 1vw;
 }
+.nav-links li:active{
+    scale: 0.9;
+}
 
-.nav-links a {
+.nav-links li a {
     color: var(--secondary-color);
     text-decoration: none;
     letter-spacing: -1px;
     font-weight: 400;
     font-size: 1.5vw;
+    position: relative;
 }
+
+.nav-links li a::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    position: absolute;
+    bottom: -5px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    background-color: black;
+    transition: all .3s ease;
+}
+
+.nav-links li a:hover::after {
+    width: 100%;
+}
+
 
 
 /* Hamburger Menu Styling */
@@ -153,7 +175,7 @@ header {
 
 .hero-content p {
     margin-top: 45px;
-    font-size: 28px;
+    font-size: 2vw;
     font-weight: lighter;
     -webkit-text-stroke: 1.3px;
     -webkit-text-stroke-color: rgb(45, 30, 15);
@@ -191,7 +213,7 @@ header {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 100vw;
+    width: 100%;
     background-color: var(--primary-color);
 }
 
@@ -243,7 +265,7 @@ header {
 
 .moving-text {
     width: 100%;
-    height: 180px;
+    height: 13vw;
     background-color: var(--secondary-color);
     color: var(--primary-color);
     padding: 2rem 0;
@@ -262,15 +284,28 @@ header {
 
 .container h2 {
     display: inline-block;
-    font-size: 4.4rem;
+    font-size: 4.4vw;
     white-space: nowrap;
-    margin: 0 50px;
+    margin: 0 5vw;
 }
 
 .container i {
     display: inline-block;
-    font-size: 2.5rem;
+    font-size: 2.5vw;
     margin: auto;
+}
+
+
+@keyframes moveing {
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        transform: translateX(-100%);
+
+    }
+
 }
 
 .service {
@@ -285,8 +320,6 @@ header {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 60px;
-
-
 }
 
 .contentLeft {
@@ -303,7 +336,8 @@ header {
 .contentLeft h1 span {
     color: var(--primary-color);
 }
-.contentLeft p{
+
+.contentLeft p {
     margin-top: 20px;
     width: 90%;
     font-size: 1.5vw;
@@ -313,50 +347,67 @@ header {
 
 .contentRight {
     margin-top: 40px;
-    width: 40%;
-    padding: 0 1.4rem;
+    width: 49%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    row-gap: 30px;
+    row-gap: 1.5vw;
 }
 
-.contentRight button {
+.contentRight .top,
+.contentRight .bottom {
+    display: flex;
+
+}
+
+.contentRight .top button,
+.contentRight .bottom button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-wrap: nowrap;
     margin-right: 10px;
     padding: 0px 20px;
     text-align: center;
     font-size: 1.4vw;
     letter-spacing: 1px;
-    height: 50px;
+    height: 4vw;
     background-color: transparent;
     color: #5e5e5e;
     border: 2px solid #5e5e5e;
     border-radius: 50px;
 }
 
-.contentRight button i{
+.contentRight button i {
     text-align: center;
-    font-size: 1.4rem;
+    font-size: 1.4vw;
     margin-right: 5px;
 }
+
 .contentRight button:hover {
     border: 2px solid #909090;
     color: #909090;
 }
 
-@keyframes moveing {
-    from {
-        transform: translateX(0%);
-    }
 
-    to {
-        transform: translateX(-100%);
-
-    }
-
+.elem{
+    width: 100%;
+    height: 10vw;
+    border-top: 1px solid #5e5e5e98;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 0 2rem ;
 }
+
+.elem h1{
+    color: #5e5e5e;
+    font-size: 4vw;
+    font-weight: 500;
+    letter-spacing: -4px;
+}
+
 
 
 
@@ -366,6 +417,7 @@ header {
     .hero-content h1 {
         line-height: normal;
     }
+
     .hero-content p {
         font-size: 2vw;
         line-height: normal;
@@ -373,6 +425,7 @@ header {
 
 
 }
+
 @media (max-width: 768px) {
     header {
         padding: 2rem 2rem;
@@ -401,13 +454,8 @@ header {
     .nav-links li {
         margin: 1.5rem 0;
     }
-    .nav-links li:hover{
-        text-align: center;
-        width: 100%;
-        background: #70706e;
 
-    }
-    .nav-links li a{
+    .nav-links li a {
         font-size: 3.4vw;
     }
 
@@ -415,12 +463,16 @@ header {
         display: flex;
     }
 
+    .hero {
+        padding: 4vw 4vw;
+    }
+
     .hero-content {
         gap: 20px;
         flex-direction: column-reverse;
     }
-    .hero-content:nth-child(2)
-    {
+
+    .hero-content:nth-child(2) {
         flex-direction: column;
         gap: 0;
 
@@ -434,15 +486,48 @@ header {
         width: 100%;
         font-size: 1rem;
     }
-    .hero-content .video{
-        width: ;
-    }
 
-
-    .btn{
+    .btn {
         display: flex;
-    justify-content: flex-start;
-    align-items: center;
+        justify-content: flex-start;
+        align-items: center;
     }
 
+    .hero-image{
+        height: 350px;
+    }
+
+    .image .arrow {
+        width: 20vw;
+        height: 20vw;
+    }
+    .arrow i {
+        font-size: 14vw;
+    } 
+    .service {
+        padding: 4rem 3vw 0 4.5vw;
+    }
+
+    .ser-content {
+        flex-direction: column;
+    }
+
+    .contentLeft h1 {
+        font-size: 8vw;
+
+    }
+
+    .contentRight {
+        flex-direction: row;
+    }
+
+}
+
+@media (max-width: 500px) {
+    .hero-content .video {
+        width: 100%;
+    }
+    .image .arrow{
+        top: -3%;
+    }
 }
