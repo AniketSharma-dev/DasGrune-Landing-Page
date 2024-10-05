@@ -481,6 +481,8 @@ header {
 
     .hero-content h1 {
         font-size: 19.5vw;
+        letter-spacing: -5px;
+
     }
 
     .hero-content p {
