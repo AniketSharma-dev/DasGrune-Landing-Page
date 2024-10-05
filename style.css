@@ -123,7 +123,7 @@ header {
 .hero {
     width: 100%;
     background-color: var(--primary-color);
-    padding: 4rem  4.5rem;
+    padding: 4rem 4.5rem;
 
 }
 
@@ -432,7 +432,8 @@ header {
     transition: background-color 0.3s, color 0.3s;
     position: relative;
 }
-.elem:last-child{
+
+.elem:last-child {
     border-bottom: 1px solid #5e5e5e98;
 
 }
@@ -474,14 +475,15 @@ header {
 
 }
 
-.text-block{
+.text-block {
     width: 100%;
     height: 100vh;
     color: #C9C9C9;
     background-color: #292929;
     padding: 9vw 9vw;
 }
-.text-block h1{
+
+.text-block h1 {
     font-family: "Poppins", sans-serif;
     font-weight: 500;
     font-size: 5.5vw;
@@ -495,29 +497,34 @@ header {
 
 /* Mobile Menu */
 @media (max-width: 1280px) {
-    .contentRight{
+    .contentRight {
         width: 35%;
     }
-   
+
 }
+
 @media (max-width: 1024px) {
-    .contentRight{
+    .contentRight {
         width: 40%;
     }
-    .hero-content .video{
+
+    .hero-content .video {
         margin-right: 0;
     }
 
 }
+
 @media (max-width: 856px) {
-    .contentLeft{
+    .contentLeft {
         width: 56%;
     }
-    .contentRight{
+
+    .contentRight {
         width: 43%;
     }
-    
+
 }
+
 @media (max-width: 826px) {
     .hero-content h1 {
         line-height: normal;
@@ -527,10 +534,12 @@ header {
         font-size: 2vw;
         line-height: normal;
     }
-    .contentLeft{
+
+    .contentLeft {
         width: 56%;
     }
-    .contentRight{
+
+    .contentRight {
         width: 44%;
     }
 
