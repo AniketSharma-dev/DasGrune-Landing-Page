@@ -18,6 +18,10 @@ body {
     height: 100%;
 }
 
+.wrapper {
+    background-color: var(--grey-color);
+}
+
 /* Navbar Styling */
 header {
     background-color: var(--primary-color);
@@ -46,7 +50,7 @@ header {
 
 .nav-links li {
     flex-shrink: 0;
-    padding: 1rem 2.7rem;
+    padding: 1rem 2.7vw;
     margin-left: 1vw;
 }
 
@@ -194,7 +198,7 @@ header {
 }
 
 .btn button {
-    cursor: not-allowed; 
+    cursor: not-allowed;
     pointer-events: none;
     width: 20vw;
     margin-right: 10px;
@@ -312,7 +316,6 @@ header {
 
 .service {
     width: 100%;
-    height: 100vh;
     background-color: var(--grey-color);
     padding: 4rem 3rem 0 4.5rem;
 }
@@ -321,11 +324,10 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 60px;
 }
 
 .contentLeft {
-    width: 60%;
+    width: 55%;
 }
 
 .contentLeft h1 {
@@ -351,7 +353,7 @@ header {
 
 .contentRight {
     margin-top: 40px;
-    width: 49%;
+    width: 30%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -394,26 +396,98 @@ header {
     color: #909090;
 }
 
+.elem-container {
+    position: relative;
+}
+
+.dynamic-image {
+    width: 24vw;
+    height: 22vw;
+    background-color: rebeccapurple;
+    position: fixed;
+    top: 45%;
+    left: 70%;
+    box-shadow: 15px 15px 0 var(--primary-color);
+    transform: translate(-50%, -50%);
+    border-top-left-radius: 80px;
+    border-top-right-radius: 80px;
+    display: none;
+    z-index: 9;
+    pointer-events: none;
+    background-size: cover;
+    background-position: center 0px;
+    background-repeat: no-repeat;
+}
+
 
 .elem {
     width: 100%;
-    height: 10vw;
-    background-color: red;
+    height: 12vw;
     border-top: 1px solid #5e5e5e98;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2rem;
+    padding: 0 3rem;
+    background-color: #171717;
+    color: #5e5e5e;
+    transition: background-color 0.3s, color 0.3s;
+    position: relative;
+}
+.elem:last-child{
+    border-bottom: 1px solid #5e5e5e98;
+
+}
+
+.elem h1::after {
+    transition: all ease 0.5s;
+
 }
 
 .elem h1 {
-    color: #5e5e5e;
-    font-size: 4vw;
     font-weight: 500;
+    font-size: 4vw;
     /* letter-spacing: -4px; */
-    letter-spacing: -0.6vw;
+    letter-spacing: -0.2vw;
+}
+
+.elem .arrow svg {
+    width: 8vw;
+    height: 8vw;
+    color: #5e5e5e;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.elem:hover {
+    background-color: #292929;
+    color: #C3C3C3;
+}
+
+.elem:hover h1::after {
+    content: ".";
+    margin-left: 3px;
+    font-size: 4vw;
+    color: var(--primary-color);
+}
+
+.elem:hover .arrow svg {
+    background-color: var(--primary-color);
+    color: #171717;
 
 }
+
+.text-block{
+    width: 100%;
+    height: 100vh;
+    color: #C9C9C9;
+    background-color: #292929;
+    padding: 5vw 8vw;
+}
+.text-block h1{
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 5vw;
+}
+
 
 
 
@@ -516,13 +590,14 @@ header {
     }
 
     .service {
-        padding: 4rem 3vw 0 4.5vw;
+        padding: 2rem 3vw 0 4.5vw;
     }
 
     .ser-content {
         flex-direction: column;
     }
-    .contentLeft{
+
+    .contentLeft {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -533,9 +608,10 @@ header {
         font-size: 8vw;
 
     }
-    .contentLeft p{
+
+    .contentLeft p {
         width: 65%;
-    } 
+    }
 
     .contentRight {
         width: 80%;
@@ -543,7 +619,9 @@ header {
         flex-wrap: wrap;
         row-gap: 20px;
     }
-    .contentRight .top button, .contentRight .bottom button {
+
+    .contentRight .top button,
+    .contentRight .bottom button {
         height: 5vw;
     }
 
@@ -552,6 +630,18 @@ header {
         font-size: 2.2vw;
         font-weight: 700;
     }
+
+
+    .dynamic-image {
+        width: 26vw;
+        height: 29vw;
+        top: 55%;
+        left: 50%;
+        box-shadow: 8px 6px 0 var(--primary-color);
+        border-top-left-radius: 40px;
+        border-top-right-radius: 40px;
+    }
+
 
 }
 
