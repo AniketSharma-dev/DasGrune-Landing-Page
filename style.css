@@ -194,7 +194,8 @@ header {
 }
 
 .btn button {
-    cursor: pointer;
+    cursor: not-allowed; 
+    pointer-events: none;
     width: 20vw;
     margin-right: 10px;
     font-size: 1.2vw;
