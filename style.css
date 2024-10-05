@@ -34,7 +34,7 @@ header {
 
 .logo {
     flex-shrink: 0;
-    font-size: 1.7vw;
+    font-size: 1.7rem;
     font-weight: 600;
     letter-spacing: -1px;
 }
@@ -49,7 +49,8 @@ header {
     padding: 1rem 2.7rem;
     margin-left: 1vw;
 }
-.nav-links li:active{
+
+.nav-links li:active {
     scale: 0.9;
 }
 
@@ -391,17 +392,17 @@ header {
 }
 
 
-.elem{
+.elem {
     width: 100%;
     height: 10vw;
     border-top: 1px solid #5e5e5e98;
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
-    padding: 0 2rem ;
+    padding: 0 2rem;
 }
 
-.elem h1{
+.elem h1 {
     color: #5e5e5e;
     font-size: 4vw;
     font-weight: 500;
@@ -493,7 +494,7 @@ header {
         align-items: center;
     }
 
-    .hero-image{
+    .hero-image {
         height: 350px;
     }
 
@@ -501,9 +502,11 @@ header {
         width: 20vw;
         height: 20vw;
     }
+
     .arrow i {
         font-size: 14vw;
-    } 
+    }
+
     .service {
         padding: 4rem 3vw 0 4.5vw;
     }
@@ -521,13 +524,20 @@ header {
         flex-direction: row;
     }
 
+    .btn button {
+        width: 38vw;
+        font-size: 2.2vw;
+        font-weight: 700;
+    }
+
 }
 
 @media (max-width: 500px) {
     .hero-content .video {
         width: 100%;
     }
-    .image .arrow{
+
+    .image .arrow {
         top: -3%;
     }
 }
