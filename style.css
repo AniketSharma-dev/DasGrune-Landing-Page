@@ -225,7 +225,7 @@ header {
 
 .hero-image {
     margin-top: 70px;
-    width: 85%;
+    width: 90%;
     height: 650px;
     border-top-left-radius: 150px;
     border-top-right-radius: 150px;
@@ -475,12 +475,18 @@ header {
 
 }
 
- .text-block {
+.text-block {
     width: 100%;
     height: 100%;
     color: #C9C9C9;
     background-color: #292929;
-    padding: 9vw 12vw;
+    padding: 8vw 12vw;
+}
+
+@media (max-width: 600px) {
+    .text-block h1 {
+        font-size: 7vw;
+    }
 }
 
 .text-block h1 {
@@ -489,58 +495,84 @@ header {
     font-size: 6vw;
     line-height: 1;
     letter-spacing: -3px;
-   
+    text-align: justify;
+    max-width: 100%;
+    margin: 0;
+
 }
 
 .text-block h1 span {
     border-radius: 50px;
-    /* vertical-align: middle; */
+    vertical-align: middle;
     display: inline-block;
-    background-size: 17vw;
     background-size: cover;
     background-repeat: no-repeat;
-    
+
 }
 
+
 /* Specific shapes (abstract images) */
+/* .shape1, .shape2, .shape3, .shape4 {
+    background-size: cover;
+    background-position: center;
+} */
 
 .shape1 {
-    width: 13vw; 
+    width: 13vw;
     height: 4vw;
-    background-image: url('./image/hero-image.jpeg'); /* Replace with the actual image URL */
-    background-position: center -40px ;
+    background-image: url('./image/hero-image.jpeg');
+    background-position: center -40px;
 
 }
 
 .shape2 {
-    width: 6.5vw; 
+    width: 6.5vw;
     height: 4vw;
     background-image: url('./image/hero-image.jpeg');
-    background-position: 0px center ;
+    background-position: 0px center;
 
 }
 
 .shape3 {
     width: 5.5vw;
     height: 4vw;
-    background-color: var(--primary-color); 
-    color: var(--secondary-color);  
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
     position: relative;
 }
-.shape3 i{
+
+.shape3 i {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     font-size: 4vw;
 }
 
 .shape4 {
-    width: 9vw; 
-    height: 4vw;    
+    width: 13vw;
+    height: 4vw;
     background-image: url('./image/hero-image.jpeg');
-    background-position: -0px -15px ;
+    background-position: -0px -15px;
 
+}
+
+
+
+/* Media queries for small screens */
+@media (max-width: 600px) {
+
+    .shape1,
+    .shape2,
+    .shape3,
+    .shape4 {
+        width: 20vw;
+        height: 7vw;
+    }
+
+    .shape3 i {
+        font-size: 5vw;
+    }
 }
 
 /* Project Section */
@@ -549,14 +581,15 @@ header {
 .project {
     width: 100%;
     background-color: var(--grey-color);
-    padding: 4rem 4.5rem;
 }
 
-.pro-content {
+.pro-heading {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
+    padding: 4rem 4.5rem;
+
 }
 
 .projectLeft {
@@ -571,7 +604,6 @@ header {
     letter-spacing: -0.2vw;
     font-size: 6vw;
     color: #c4c4c4;
-
 }
 
 .projectLeft h1 span {
@@ -628,6 +660,65 @@ header {
 .projectRight button:hover {
     border: 2px solid #909090;
     color: #909090;
+}
+
+
+
+.pro-img {
+    width: 100%;
+    height: 100vh;
+    margin-top: 30px;
+    padding: 20px 80px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: repeat(2, 1fr); 
+    gap: 20px;
+}
+.pro-img>div{
+    background-repeat: no-repeat;
+    /* object-fit: cover; */
+    background-size: cover;
+
+}
+
+.item1{
+    grid-column: 1/2;
+    background-position: 0px 0px;
+    background-clip: content-box;
+    background-size: 595px;
+    background-image: url(https://img.freepik.com/premium-photo/modern-abstract-dynamic-shapes-black-white-background-with-grainy-paper-texture-digital-art_598586-1238.jpg?w=1060);
+}
+
+.item2{
+    background-image: url(https://as1.ftcdn.net/v2/jpg/05/27/43/12/1000_F_527431217_VTfciv4rB0anYkDVU2mCmalktJQPO55m.jpg);
+    background-position: -23px 0px;
+    background-size: 730px;
+    grid-column: 2/4;
+    background-color: red;
+}
+.item3{
+    background-image: url(https://as2.ftcdn.net/v2/jpg/05/26/58/39/1000_F_526583935_yaPEZD2yWSRO9mx6uaQRVPrJb20SB90n.jpg);
+    background-position: -300px 0px;
+    background-size: 730px;
+    grid-column: 1/2;
+    grid-column: 1/2;
+    background-color: red;
+}
+.item4{
+    background-image: url(https://img.freepik.com/premium-photo/modern-abstract-dynamic-shapes-black-white-background-with-grainy-paper-texture-digital-art_598586-985.jpg?w=360);
+    background-position: 0px center;
+    background-size:  350px;
+    grid-column: 2/3;
+    grid-column: 2/3;
+    background-color: red;
+}
+.item5{
+    background-image: url(https://img.freepik.com/premium-photo/beautiful-abstract-background-soft-gradient_973064-1046.jpg?w=826);
+    background-position: 0px center;
+    background-size:  550px;
+    grid-column: 3/4;
+    background-color: red;
+    border-bottom-right-radius: 150px;
 }
 
 
@@ -756,7 +847,10 @@ header {
     }
 
     .hero-image {
-        height: 350px;
+        width: 88%;
+        height: 247px;
+        border-top-left-radius: 70px;
+        border-top-right-radius: 70px;
     }
 
     .image .arrow {
@@ -769,7 +863,7 @@ header {
     }
 
     .service {
-        padding: 2rem 3vw 0 4.5vw;
+        padding: 2rem 4.5vw;
     }
 
     .ser-content {
@@ -783,13 +877,16 @@ header {
         width: 80%;
     }
 
-    .contentLeft h1 {
-        font-size: 8vw;
+    .contentLeft h1,
+    .projectLeft h1 {
+        font-size: 9vw;
 
     }
 
-    .contentLeft p {
-        width: 65%;
+    .contentLeft p,
+    .projectLeft p {
+        width: 95%;
+        font-size: 3.1vw;
     }
 
     .contentRight {
@@ -801,7 +898,8 @@ header {
 
     .contentRight .top button,
     .contentRight .bottom button {
-        height: 5vw;
+        height: 6vw;
+        font-size: 2.4vw;
     }
 
     .btn button {
@@ -821,20 +919,46 @@ header {
         border-top-right-radius: 40px;
     }
 
-    .projectLeft {
-        flex-direction: column;
+    .elem {
+        height: 25vw;
+        padding: 0 6px;
     }
-    .projectLeft h1 {
-        font-size: 5vw;
-        width: 70%;
+
+    .elem h1 {
+        font-size: 6vw;
+    }
+
+    .pro-heading {
+        padding: 2rem 4.5vw;
 
     }
-    .projectLeft p{
-        width: 70%;
+
+    .projectRight .top button,
+    .projectRight .bottom button {
+        height: 6vw;
+        font-size: 2.4vw;
     }
+
+    .projectLeft {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
+
+    }
+
     .projectRight {
         flex-direction: column;
         row-gap: 20px;
+    }
+
+
+    .shape1 {
+        background-position: center -12px;
+    }
+
+    .shape4 {
+        background-position: -0px -5px;
     }
 
 
