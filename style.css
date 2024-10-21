@@ -903,7 +903,7 @@ header {
 
     .talkus {
         justify-content: space-evenly;
-        padding: 15% 0 20% 0;
+        /* padding: 15% 0 20% 0; */
     }
 
     .hero-content h1 {
@@ -1038,8 +1038,8 @@ header {
     }
 
     .contentRight {
-        width: 80%;
-        flex-direction: row;
+        width: 95%;
+        /* flex-direction: row; */
         flex-wrap: wrap;
         row-gap: 20px;
     }
@@ -1118,14 +1118,21 @@ header {
         grid-column: 1/2;
     }
 }
+
 @media (max-width: 758px) {
     .text-block h1 {
         letter-spacing: -2.7px;
     }
 }
+
 @media (max-width: 579px) {
     .text-block h1 {
         letter-spacing: -2px;
+    }
+    .talkus-button button {
+        width: 20vw;
+        height: 7.1vw;
+        font-size: 2.5;
     }
 }
 
@@ -1138,13 +1145,49 @@ header {
         top: -3%;
     }
 
+    .btn button {
+        font-size: 2.5vw;
+    }
+
+    .contentRight .top button,
+    .contentRight .bottom button,
+    .projectRight .top button,
+    .projectRight .bottom button {
+        height: 8vw;
+        font-size: 3vw;
+    }
+
+    .projectRight button i,
+    .contentRight button i {
+        font-size: 2.4vw;
+    }
+
     .text-block h1 {
         font-size: 5.8vw;
         letter-spacing: 0px;
     }
+
 }
 
 @media (max-width: 368px) {
+    .btn {
+        justify-content: space-between;
+        padding: 0;
+    }
+
+    .btn button {
+        width: 43vw;
+        font-size: 2.8vw;
+    }
+
+    /*     
+    .contentRight .top button,
+    .contentRight .bottom button {
+        padding: 0px 10px
+    } */
+   
+
+
     .pro-heading .pro-img {
         grid-template-columns: repeat(1, 1fr);
     }
