@@ -738,7 +738,7 @@ header {
 
 
 .talkus-head h1 {
-    text-align: center; 
+    text-align: center;
     font-size: 7.3vw;
     font-size: bold;
 
@@ -831,6 +831,14 @@ header {
 
 }
 
+@media (max-width: 1215px) {
+
+
+    .text-block h1 {
+        letter-spacing: -4px;
+    }
+}
+
 @media (max-width: 1100px) {
     .pro-heading .pro-img {
         grid-template-columns: repeat(2, minmax(300px, 1fr));
@@ -860,7 +868,7 @@ header {
         height: 7rem;
     }
 
-    .talkus{
+    .talkus {
         justify-content: space-evenly;
     }
 
@@ -878,6 +886,12 @@ header {
 
 }
 
+@media (max-width: 973px) {
+    .text-block h1 {
+        letter-spacing: -5px;
+    }
+}
+
 @media (max-width: 856px) {
     .contentLeft {
         width: 56%;
@@ -887,10 +901,11 @@ header {
         width: 43%;
     }
 
-    .talkus{
+    .talkus {
         justify-content: space-evenly;
         padding: 15% 0 20% 0;
     }
+
     .hero-content h1 {
         line-height: normal;
     }
@@ -915,7 +930,6 @@ header {
     header {
         padding: 2rem 2rem;
     }
-
 
     .nav-links {
         position: fixed;
@@ -1062,6 +1076,11 @@ header {
         font-size: 6vw;
     }
 
+    .text-block h1 {
+        font-size: 6.5vw;
+        letter-spacing: -3px;
+    }
+
     .pro-heading {
         padding: 2rem 4.5vw;
 
@@ -1099,6 +1118,16 @@ header {
         grid-column: 1/2;
     }
 }
+@media (max-width: 758px) {
+    .text-block h1 {
+        letter-spacing: -2.7px;
+    }
+}
+@media (max-width: 579px) {
+    .text-block h1 {
+        letter-spacing: -2px;
+    }
+}
 
 @media (max-width: 500px) {
     .hero-content .video {
@@ -1107,6 +1136,11 @@ header {
 
     .image .arrow {
         top: -3%;
+    }
+
+    .text-block h1 {
+        font-size: 5.8vw;
+        letter-spacing: 0px;
     }
 }
 
