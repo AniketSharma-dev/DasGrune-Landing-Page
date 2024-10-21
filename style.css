@@ -891,10 +891,6 @@ header {
         justify-content: space-evenly;
         padding: 15% 0 20% 0;
     }
-
-}
-
-@media (max-width: 826px) {
     .hero-content h1 {
         line-height: normal;
     }
@@ -912,8 +908,8 @@ header {
         width: 44%;
     }
 
-
 }
+
 
 @media (max-width: 768px) {
     header {
@@ -1090,15 +1086,6 @@ header {
         row-gap: 20px;
     }
 
-
-    .shape1 {
-        background-position: center -12px;
-    }
-
-    .shape4 {
-        background-position: -0px -5px;
-    }
-
     .pro-heading .pro-img {
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(5, minmax(300px, 1fr));
@@ -1111,9 +1098,6 @@ header {
     .pro-img .item5 {
         grid-column: 1/2;
     }
-
-
-
 }
 
 @media (max-width: 500px) {
