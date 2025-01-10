@@ -1,6 +1,6 @@
 # Das Grüne Landing Page
 
-![Das Grüne](https://dribbble.com/shots/19365923-Das-Gr-ne-Creative-Design-Agency-Landing-Page-Website) 
+![Das Grüne](https://cdn.dribbble.com/userupload/3537350/file/original-b48a39d26c652b9552d2740b8026d4ef.png?resize=640x2409&vertical=center) 
 
 ## Overview
 
